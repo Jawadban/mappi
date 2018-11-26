@@ -1,0 +1,16 @@
+tools:
+  nodejs: 8.9.4
+      
+
+triggers:
+  - manual:
+      name: publish
+      call: publish
+
+flows:
+  default:
+    - npm install
+    - npm publish
+    
+  publish:
+    - npm publish
